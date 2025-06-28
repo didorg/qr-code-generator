@@ -82,11 +82,20 @@ Comprehensive documentation is available in the [`docs/`](docs/) directory:
 
 ## 🚀 Deployment
 
-The application can be deployed to various platforms:
+**✅ GitHub Pages Configured**: This project includes automated GitHub Pages deployment via GitHub Actions.
 
-- **[Vercel](https://vercel.com)** _(Recommended)_ - Zero-config deployment
+### Quick Deploy to GitHub Pages
+
+1. Enable GitHub Pages in repository Settings → Pages
+2. Set Source to "GitHub Actions"
+3. Push to `main` branch - deployment happens automatically!
+
+**Live Demo**: `https://YOUR_USERNAME.github.io/qr-code-generator/`
+
+### Alternative Platforms
+
+- **[Vercel](https://vercel.com)** - Zero-config deployment
 - **[Netlify](https://netlify.com)** - Git-based deployment
-- **[GitHub Pages](https://pages.github.com)** - Free static hosting
 - **[Firebase Hosting](https://firebase.google.com/docs/hosting)** - Google's hosting solution
 
 See the [Deployment Guide](docs/DEPLOYMENT.md) for detailed instructions.
