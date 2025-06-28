@@ -91,11 +91,13 @@ netlify deploy --prod --dir=dist
 
 **✅ This project is already configured for automated GitHub Pages deployment.**
 
-The deployment is triggered by:
+The deployment is triggered **ONLY** by:
 
 - Direct pushes to the `main` branch
-- Merged pull requests into `main` branch
+- Successfully merged pull requests into `main` branch (from any source branch)
 - Manual workflow dispatch
+
+**Important**: Pushes to other branches (`dev`, `feature/*`, etc.) will **NOT** trigger deployment. Only activity on the `main` branch triggers deployment.
 
 #### Setup Instructions
 
