@@ -1,15 +1,11 @@
 name: Deploy to GitHub Pages
 
 # Deploy ONLY on main branch activity:
-# - Direct pushes to main
-# - Successfully merged PRs to main
+# - Direct pushes to main (includes merged PRs)
 # - Manual workflow dispatch
-# NO deployment on dev, feature, or other branches
+# NO deployment triggers on dev, feature, or other branches
 on:
   push:
-    branches: [main]
-  pull_request:
-    types: [closed]
     branches: [main]
   workflow_dispatch:
 
@@ -24,10 +20,8 @@ concurrency:
 
 jobs:
   build:
-    if: |
-      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-      (github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main') ||
-      github.event_name == 'workflow_dispatch'
+    # Simplified condition - only push to main or manual dispatch
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
