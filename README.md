@@ -90,6 +90,8 @@ Comprehensive documentation is available in the [`docs/`](docs/) directory:
 2. Set Source to "GitHub Actions"
 3. Push to `main` branch - deployment happens automatically!
 
+**Note**: Deployment only occurs on `main` branch activity. Pushes to `dev` or other branches do **not** trigger deployment.
+
 **Live Demo**: `https://YOUR_USERNAME.github.io/qr-code-generator/`
 
 ### Alternative Platforms

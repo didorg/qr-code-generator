@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Automated GitHub Pages deployment** with GitHub Actions
-- **CI/CD pipeline** triggered by pushes and merged PRs to main branch
+- **CI/CD pipeline** triggered exclusively by main branch activity (direct pushes or merged PRs)
 - **Updated documentation** with deployment instructions
 - **Enhanced workflow** supporting branch-based development with automatic deployment
 
