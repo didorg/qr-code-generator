@@ -97,3 +97,29 @@ If you find any issues with the documentation:
 ---
 
 **Last Updated**: January 2024 | **Maintained by**: QR Code Generator Team
+
+# 📖 Documentation
+
+Welcome to the QR Code Generator documentation!
+
+## 📚 Available Documentation
+
+- [**Architecture**](ARCHITECTURE.md) - System design and technical architecture
+- [**Contributing**](CONTRIBUTING.md) - How to contribute to the project
+- [**Deployment**](DEPLOYMENT.md) - Deployment guide for various platforms
+- [**Security**](SECURITY.md) - Security considerations and guidelines
+
+## 🚀 Quick Links
+
+- **Live Demo**: [https://YOUR_USERNAME.github.io/qr-code-generator/](https://YOUR_USERNAME.github.io/qr-code-generator/)
+- **Repository**: [GitHub Repository](https://github.com/YOUR_USERNAME/qr-code-generator)
+
+## 🎯 Getting Started
+
+For development setup and contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+For deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
+---
+
+**Need help?** Create an issue or check existing documentation!

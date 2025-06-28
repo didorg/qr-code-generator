@@ -87,47 +87,50 @@ npm install -g netlify-cli
 netlify deploy --prod --dir=dist
 ```
 
-### GitHub Pages
+### GitHub Pages (Configured)
 
-Deploy directly from your GitHub repository.
+**✅ This project is already configured for automated GitHub Pages deployment.**
 
-Create `.github/workflows/deploy.yml`:
+The deployment is triggered by:
 
-```yaml
-name: Deploy to GitHub Pages
+- Direct pushes to the `main` branch
+- Merged pull requests into `main` branch
+- Manual workflow dispatch
 
-on:
-  push:
-    branches: [main]
+#### Setup Instructions
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
+1. **Enable GitHub Pages:**
 
-      - run: npm ci
-      - run: npm run build
+   - Go to repository Settings → Pages
+   - Set Source to "GitHub Actions"
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-```
+2. **Deploy:**
 
-Update `vite.config.ts` for correct base path:
+   ```bash
+   git add .
+   git commit -m "your changes"
+   git push origin main
+   ```
 
-```typescript
-export default defineConfig({
-  plugins: [react()],
-  base: '/qr-code-generator/', // Replace with your repo name
-});
-```
+3. **Access your site at:**
+   ```
+   https://YOUR_USERNAME.github.io/qr-code-generator/
+   ```
+
+#### Workflow Features
+
+- **Automated CI/CD**: Deploys on every push/merge to main
+- **Security**: Uses GitHub's OIDC tokens (no secrets needed)
+- **Performance**: Caches dependencies for faster builds
+- **Branch Strategy**: Supports both direct push and PR merge workflows
+
+The deployment workflow is located at `.github/workflows/deploy.yml` and includes:
+
+- Node.js 18 environment
+- npm dependency caching
+- TypeScript compilation
+- Vite build process
+- Automated artifact upload
 
 ### Other Platforms
 
