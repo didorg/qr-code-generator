@@ -9,6 +9,7 @@ declare global {
       background: string;
       foreground: string;
       level: string;
+      padding?: number;
     }) => void;
   }
 }

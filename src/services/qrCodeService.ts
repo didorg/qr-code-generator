@@ -11,6 +11,7 @@ declare global {
       background: string;
       foreground: string;
       level: string;
+      padding?: number;
     }) => void;
   }
 }
@@ -98,6 +99,7 @@ export class QRCodeService {
         background: colors.background,
         foreground: colors.foreground,
         level: config.level,
+        padding: 10,
       });
 
       const imageUrl = canvas.toDataURL();
