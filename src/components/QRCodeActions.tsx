@@ -24,7 +24,7 @@ export const QRCodeActions = ({
       <div className='flex gap-4 w-full max-w-sm'>
         <button
           onClick={onDownload}
-          className='flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 font-medium shadow-lg'
+          className='flex-1 flex items-center justify-center gap-2 px-7 py-4 bg-coral-red text-white rounded-full font-montserrat hover:shadow-lg transition'
         >
           <Download className='w-4 h-4' />
           Download
@@ -32,7 +32,7 @@ export const QRCodeActions = ({
 
         <button
           onClick={onCopy}
-          className='flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-medium'
+          className='flex-1 flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-coral-red text-coral-red rounded-xl hover:bg-coral-red hover:text-white transition font-montserrat'
         >
           {copied ? (
             <>
@@ -53,7 +53,7 @@ export const QRCodeActions = ({
         <h3 className='text-sm font-medium text-gray-700 mb-2'>
           QR Code Data:
         </h3>
-        <div className='bg-gray-100 rounded-lg p-3 text-xs text-gray-600 max-h-32 overflow-y-auto'>
+        <div className='bg-gray-100 rounded-lg p-3 text-xs text-slate-gray max-h-32 overflow-y-auto'>
           <pre className='whitespace-pre-wrap break-words'>{qrResult.data}</pre>
         </div>
       </div>
