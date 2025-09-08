@@ -21,28 +21,30 @@ export const QRCodeActions = ({
   return (
     <>
       {/* Action Buttons */}
-      <div className='flex gap-4 w-full max-w-sm'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-sm'>
         <button
           onClick={onDownload}
-          className='flex-1 flex items-center justify-center gap-2 px-7 py-4 bg-coral-red text-white rounded-full font-montserrat hover:shadow-lg transition'
+          aria-label='Download QR code'
+          className='w-full inline-flex items-center justify-center gap-2 h-12 sm:h-12 px-4 bg-coral-red text-white rounded-xl font-montserrat text-sm sm:text-base shadow-sm hover:shadow-md active:translate-y-px transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-red/60'
         >
-          <Download className='w-4 h-4' />
-          Download
+          <Download className='w-5 h-5' />
+          <span>Download</span>
         </button>
 
         <button
           onClick={onCopy}
-          className='flex-1 flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-coral-red text-coral-red rounded-xl hover:bg-coral-red hover:text-white transition font-montserrat'
+          aria-label='Copy QR data'
+          className='w-full inline-flex items-center justify-center gap-2 h-12 sm:h-12 px-4 border-2 border-coral-red text-coral-red rounded-xl font-montserrat text-sm sm:text-base hover:bg-coral-red hover:text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-red/60'
         >
           {copied ? (
             <>
-              <Check className='w-4 h-4 text-green-600' />
-              Copied!
+              <Check className='w-5 h-5 text-green-600' />
+              <span>Copied!</span>
             </>
           ) : (
             <>
-              <Copy className='w-4 h-4' />
-              Copy Data
+              <Copy className='w-5 h-5' />
+              <span>Copy Data</span>
             </>
           )}
         </button>
