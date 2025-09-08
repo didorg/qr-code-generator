@@ -72,16 +72,16 @@ const QRCodeGenerator = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-white via-pale-blue/80 to-primary/30 p-4'>
+    <div className='min-h-screen bg-gradient-to-br from-white via-pale-blue/80 to-primary/30 p-4 py-12'>
       <div className='max-container'>
         <div className='text-center mb-8'>
           <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-300 via-coral-red/80 to-coral-red rounded-2xl mb-4'>
-            <QrCode className='w-8 h-8 text-white' />
+            <QrCode className='w-10 h-10 text-white' />
           </div>
-          <h1 className='font-palanquin text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2'>
+          <h1 className='font-palanquin text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2'>
             QR Code Generator
           </h1>
-          <p className='font-montserrat font-medium text-2xl text-slate-gray'>
+          <p className='font-montserrat font-medium text-xl md:text-2xl text-slate-gray'>
             Generate QR codes for URLs, text, and contact information
           </p>
         </div>
