@@ -10,8 +10,8 @@ export const ColorCustomizer = ({ colors, onChange }: ColorCustomizerProps) => {
   return (
     <div className='w-full max-w-sm'>
       <div className='flex items-center gap-2 mb-4'>
-        <Palette className='w-5 h-5 text-purple-600' />
-        <h3 className='text-lg font-semibold text-gray-800'>
+        <Palette className='w-5 h-5 text-coral-red' />
+        <h3 className='font-palanquin text-lg font-semibold text-gray-800'>
           Customize Colors
         </h3>
       </div>
@@ -27,7 +27,7 @@ export const ColorCustomizer = ({ colors, onChange }: ColorCustomizerProps) => {
               value={colors.foreground}
               onChange={(e) => onChange({ foreground: e.target.value })}
               placeholder='#000000'
-              className='w-full pl-4 pr-16 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm font-mono'
+              className='input pl-4 pr-16 text-sm font-mono'
             />
             <input
               type='color'
@@ -48,7 +48,7 @@ export const ColorCustomizer = ({ colors, onChange }: ColorCustomizerProps) => {
               value={colors.background}
               onChange={(e) => onChange({ background: e.target.value })}
               placeholder='#ffffff'
-              className='w-full pl-4 pr-16 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm font-mono'
+              className='input pl-4 pr-16 text-sm font-mono'
             />
             <input
               type='color'

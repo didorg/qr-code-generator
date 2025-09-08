@@ -21,8 +21,8 @@ export const TabNavigation = ({
               onClick={() => onTabChange(tab.id)}
               className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.id
-                  ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50'
-                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                  ? 'text-coral-red border-b-2 border-coral-red bg-coral-red/10'
+                  : 'text-slate-gray hover:text-coral-red hover:bg-coral-red/10'
               }`}
             >
               <IconComponent className='w-4 h-4' />

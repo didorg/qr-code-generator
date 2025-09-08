@@ -18,7 +18,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
             value={contact.firstName}
             onChange={(e) => onChange({ firstName: e.target.value })}
             placeholder='John'
-            className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+            className='input'
           />
         </div>
         <div>
@@ -30,7 +30,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
             value={contact.lastName}
             onChange={(e) => onChange({ lastName: e.target.value })}
             placeholder='Doe'
-            className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+            className='input'
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
           value={contact.phone}
           onChange={(e) => onChange({ phone: e.target.value })}
           placeholder='+1 (555) 123-4567'
-          className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+          className='input'
         />
       </div>
 
@@ -57,7 +57,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
           value={contact.email}
           onChange={(e) => onChange({ email: e.target.value })}
           placeholder='john.doe@example.com'
-          className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+          className='input'
         />
       </div>
 
@@ -70,7 +70,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
           value={contact.organization}
           onChange={(e) => onChange({ organization: e.target.value })}
           placeholder='Company Name'
-          className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+          className='input'
         />
       </div>
 
@@ -83,7 +83,7 @@ export const ContactForm = ({ contact, onChange }: ContactFormProps) => {
           value={contact.url}
           onChange={(e) => onChange({ url: e.target.value })}
           placeholder='https://example.com'
-          className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200'
+          className='input'
         />
       </div>
     </div>

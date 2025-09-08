@@ -72,21 +72,21 @@ const QRCodeGenerator = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 p-4'>
-      <div className='max-w-4xl mx-auto'>
+    <div className='min-h-screen bg-gradient-to-br from-white via-pale-blue/80 to-primary/30 p-4 py-12'>
+      <div className='max-container'>
         <div className='text-center mb-8'>
-          <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl mb-4'>
-            <QrCode className='w-8 h-8 text-white' />
+          <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-300 via-coral-red/80 to-coral-red rounded-2xl mb-4'>
+            <QrCode className='w-10 h-10 text-white' />
           </div>
-          <h1 className='text-4xl font-bold bg-gradient-to-r from-indigo-700 to-purple-600 bg-clip-text text-transparent mb-2'>
+          <h1 className='font-palanquin text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2'>
             QR Code Generator
           </h1>
-          <p className='text-gray-600 text-lg'>
+          <p className='font-montserrat font-medium text-xl md:text-2xl text-slate-gray'>
             Generate QR codes for URLs, text, and contact information
           </p>
         </div>
 
-        <div className='bg-white rounded-3xl shadow-2xl overflow-hidden'>
+        <div className='bg-white rounded-3xl shadow-3xl overflow-hidden'>
           {/* Tab Navigation */}
           <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
@@ -94,7 +94,7 @@ const QRCodeGenerator = () => {
             <div className='grid lg:grid-cols-2 gap-8'>
               {/* Input Section */}
               <div className='space-y-6'>
-                <h2 className='text-2xl font-semibold text-gray-800 mb-4'>
+                <h2 className='font-palanquin text-2xl md:text-3xl font-bold text-gray-800 mb-4'>
                   {getFormTitle()}
                 </h2>
 
@@ -102,7 +102,7 @@ const QRCodeGenerator = () => {
 
                 <button
                   onClick={handleReset}
-                  className='w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-medium'
+                  className='w-full border-2 border-coral-red text-coral-red rounded-xl px-5 py-2.5 hover:bg-coral-red hover:text-white transition font-montserrat'
                 >
                   Clear All Fields
                 </button>
@@ -130,7 +130,7 @@ const QRCodeGenerator = () => {
           </div>
         </div>
 
-        <div className='text-center mt-8 text-gray-500 text-sm'>
+        <div className='text-center mt-8 text-slate-gray text-sm'>
           <p>Generate QR codes instantly • No data stored • Free to use</p>
         </div>
       </div>

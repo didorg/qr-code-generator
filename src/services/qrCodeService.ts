@@ -90,19 +90,33 @@ export class QRCodeService {
     config: QRCodeConfig
   ): QRCodeResult {
     try {
-      const canvas = document.createElement('canvas');
+      const qrCanvas = document.createElement('canvas');
 
+      // Render QR without internal padding to avoid uneven rounding
       new window.QRious({
-        element: canvas,
+        element: qrCanvas,
         value: text,
         size: config.size,
         background: colors.background,
         foreground: colors.foreground,
         level: config.level,
-        padding: 10,
+        padding: 0,
       });
 
-      const imageUrl = canvas.toDataURL();
+      // Add our own symmetric quiet zone around the QR
+      const quiet = 10; // pixels on each side
+      const finalCanvas = document.createElement('canvas');
+      finalCanvas.width = config.size + quiet * 2;
+      finalCanvas.height = config.size + quiet * 2;
+      const ctx = finalCanvas.getContext('2d');
+      if (!ctx) throw new Error('Canvas 2D context unavailable');
+
+      // Uniform background and centered QR image
+      ctx.fillStyle = colors.background;
+      ctx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
+      ctx.drawImage(qrCanvas, quiet, quiet);
+
+      const imageUrl = finalCanvas.toDataURL();
       return { imageUrl, data: text };
     } catch (error) {
       console.error('Error creating QR code with QRious:', error);

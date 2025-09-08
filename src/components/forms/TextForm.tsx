@@ -14,7 +14,7 @@ export const TextForm = ({ value, onChange }: TextFormProps) => {
         onChange={(e) => onChange(e.target.value)}
         placeholder='Enter any text to generate QR code...'
         rows={4}
-        className='w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none'
+        className='input resize-none'
       />
     </div>
   );
